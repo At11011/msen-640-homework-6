@@ -1,0 +1,122 @@
+\input{./src/main.sty}
+% Additional SI unit for Fahrenheit
+\DeclareSIUnit\fahrenheit{\degree F}
+
+\begin{document}
+
+% Include title page
+\input{./src/titlepage.tex}
+
+\pagebreak
+
+\begin{enumerate}
+  \item After careful synthesis, you finally manage to create a new
+    substance (call it ‘A’) that maintains a
+    liquid phase over a wide range of temperatures and will mix with
+    water on warm days but is immiscible
+    with water on colder days. The mixture of A and water seems to
+    obey the regular solution model to
+    an absurd degree. Before publishing your results, you hope to
+    characterize binary mixtures of A and
+    water in terms of the regular solution model through a series of
+    experiments.
+
+    \begin{enumerate}[(a.)]
+      \item In preparation, you wish to recall the relationship
+        between equilibrium volume fraction and
+        the interaction parameter $\chi$. Starting from the mixing free
+        energy, derive this relationship.
+      \item  Without bothering to measure the initial volume fraction
+        of A, you start by cooling the mixture to $T =
+        \SI{50}{\degree F}$, observing phase
+        separation. Carefully
+        drawing a sample from the A-rich phase, you
+        then determine that it has a volume fraction of $\phi_A = 0.8$.
+        What is the value of $\chi$ that this corresponds
+        to?
+      \item In a separate experiment, you prepare a mixture, this
+        time taking care to record a volume
+        fraction $\phi_A^{(0)} = 0.6$, and place it in your lab
+        refrigerator, cooling it to
+        $T = \SI{35}{\degree F}$ . You notice an
+        % \ul{almost complete separation} of A from water.
+        Thinking that you
+        might have difficulty measuring the
+        possibly trace amounts of water in the A-rich phase, you
+        instead note that the A-rich phase occupies
+        about \SI{62}{\percent} of the container. Use this
+        information to determine
+        \si{\percent} the volume fraction of the A-rich phase.
+      \item he interaction parameter can be expressed as a function
+        of temperature as $\chi = \frac{A}{T} + B$,
+        where $T$ is measured in Kelvin and $A$ and $B$ are material
+        constants. Using the data obtained from your two
+        experiments, determine $A$ and $B$.
+      \item Using what you have learned, determine the \textit{upper critical
+        solution temperature (UCST)} – the
+        temperature above which A and water are miscible for all compositions.
+    \end{enumerate}
+
+  \item You have found that the partial molar volume of component 1
+    of a two-component system is given
+    by
+
+    \begin{equation}
+      \Delta \overline V_1 = 2aX_1X_2^2
+    \end{equation}
+
+    where $a = \SI{2.7166}{\centi\meter\cubed\per\mole}$
+
+    \begin{enumerate}[(a.)]
+      \item Determine an equation for the change in partial molar
+        volume of component 2 during mixing
+        as a function of composition.
+      \item Determine an equation for the total volume change during
+        mixing as a function of composition.
+      \item Calculate the total volume change of the mixture, the
+        partial molar volume change of component 1, and the partial
+        molar volume change of component 2
+        (three separate numerical answers) when
+        \SI{75}{\mole} of component 1 are mixed with \SI{25}{\mole}
+        of component 2.
+      \item GRAPHICALLY (i.e., you will need to plot something)
+        verify the partial molar volume change
+        of component 1 that you calculated in part (c). You can
+        estimate your answer for this part.
+    \end{enumerate}
+
+  \item Consider a binary phase containing the alloying elements A
+    and B, which follows a subregular
+    solution model with the following mixing parameters:
+
+    \begin{align*}
+      \omega_A &= \SI{10500}{\joule\per\mole} \\
+      \omega_B &= \SI{-3000}{\joule\per\mole}
+    \end{align*}
+
+    You can assume that both A and B have references states
+    consistent with the phase being plotted.
+
+    \begin{enumerate}[(a.)]
+      \item On the same plot, plot $T\Delta S_{\text{mix}}$, $\Delta
+        H_{\text{mix}}$, and
+        $\Delta G_{\text{mix}}$ for this
+        phase at \SI{500}{\kelvin} over a compositional range of $X_B
+        = 0$ to $X_B = 1$.
+      \item On a new plot, plot that same three curves at
+        \SI{5000}{\kelvin} over
+        the same compositional range.
+        Describe what you see in this plot and how entropy and
+        enthalpy play into the overall Gibbs free
+        energy of mixing.
+      \item Using your plot from part (a), graphically determine the
+        activity coefficient of B in an alloy
+        containing \SI{60}{at\percent} B at \SI{500}{\kelvin}.
+    \end{enumerate}
+
+\end{enumerate}
+
+% \section*{Supporting code:}
+% \inputminted{julia}{./calculations/src/calculations.jl}
+
+\end{document}
