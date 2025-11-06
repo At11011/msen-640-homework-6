@@ -26,6 +26,24 @@
         between equilibrium volume fraction and
         the interaction parameter $\chi$. Starting from the mixing free
         energy, derive this relationship.
+
+        \boxedanswer{
+            Recall the Gibbs free energy of mixing:
+
+            \begin{equation}
+                \Delta G_{\text{mix}} = a_0X_1X_2 + RT(X_1\ln X_1 + X_2 \ln X_2) \tag{8.110}
+            \end{equation}
+
+
+            Set $X_1 = \phi_A$ and $a_0 = \chi RT$. Note that $X_2 = 1 - X_1$, and that $\frac{d\Delta G_{\text{mix}}}{dX_1}$
+
+            \begin{align*}
+                \frac{d(\Delta G_{\text{mix}}/(RT))}{d\phi_A} &= \chi(1 - 2\phi_A) + (\ln \phi_A + 1 - \ln (1 - \phi_A) + 1) = 0  \\
+                \chi(2\phi_A - 1) &= RT\left(\ln \left[\frac{\phi_A}{1 - \phi_A}\right] + 2\right)  \\
+                \Aboxed{\chi &= \frac{1}{2\phi_A - 1}\left(\ln \left[\frac{\phi_A}{1 - \phi_A}\right] + 2\right)}
+            \end{align*}
+        }
+
       \item  Without bothering to measure the initial volume fraction
         of A, you start by cooling the mixture to $T =
         \SI{50}{\degree F}$, observing phase
@@ -34,12 +52,24 @@
         then determine that it has a volume fraction of $\phi_A = 0.8$.
         What is the value of $\chi$ that this corresponds
         to?
+
+        \boxedanswer{
+
+        Plug into the above equation:
+
+            \begin{align*}
+                \chi &= \frac{1}{2X_A - 1}\left(\ln \left[\frac{X_A}{1 - X_A}\right] + 2\right) \\
+                \chi &= \frac{1}{2(0.8) - 1}\left(\ln \left[\frac{0.8}{1 - 0.8}\right] + 2\right) \\
+                \Aboxed{\chi &\approx 5.644}
+            \end{align*}
+        }
+
       \item In a separate experiment, you prepare a mixture, this
         time taking care to record a volume
         fraction $\phi_A^{(0)} = 0.6$, and place it in your lab
         refrigerator, cooling it to
         $T = \SI{35}{\degree F}$ . You notice an
-        % \ul{almost complete separation} of A from water.
+        \underline{almost complete separation} of A from water.
         Thinking that you
         might have difficulty measuring the
         possibly trace amounts of water in the A-rich phase, you
@@ -47,11 +77,40 @@
         about \SI{62}{\percent} of the container. Use this
         information to determine
         \si{\percent} the volume fraction of the A-rich phase.
-      \item he interaction parameter can be expressed as a function
+
+        \boxedanswer{
+
+            We can assume that volume is conserved, and calculate the
+            volume fraction as follows:
+
+            \begin{align*}
+                \phi_A^{(0)} &= a\phi_A^{(1)} + (1 - a)\phi_A^{(2)} \\
+                             & \begin{aligned}
+                                \phi_A^{(2)} \approx 0 \\
+                                a &= 0.62 \\
+                         \end{aligned} \\
+                \phi_A^{(1)} &= \frac{0.6}{0.62} \\
+                \Aboxed{\phi_A^{(1)} &= 0.968}
+            \end{align*}
+        }
+
+      \item The interaction parameter can be expressed as a function
         of temperature as $\chi = \frac{A}{T} + B$,
         where $T$ is measured in Kelvin and $A$ and $B$ are material
         constants. Using the data obtained from your two
         experiments, determine $A$ and $B$.
+
+    \boxedanswer{
+
+        We have two data points, at the first data point, the volume
+        fraction is 0.8 at \SI{50}{\degree F} or \SI{274.816}{\kelvin},
+        and 0.968 at \SI{35}{\degree F}. 
+
+        \begin{align*}
+           1 
+        \end{align*}
+    }
+
       \item Using what you have learned, determine the \textit{upper critical
         solution temperature (UCST)} – the
         temperature above which A and water are miscible for all compositions.
