@@ -164,19 +164,97 @@
       \item Determine an equation for the change in partial molar
         volume of component 2 during mixing
         as a function of composition.
+
+        \boxedanswer{
+            Use the Gibbs-Duhem relation:
+
+            \begin{align*}
+                X_1 d\Delta \overline{V}_1 + X_2 d\Delta \overline V_2 &= 0 \\
+                d\Delta \overline V_2 &= -\frac{X_1}{X_2}d\Delta \overline{V}_1 \\
+                    & \begin{aligned}
+                        X_2 &= 1 - X_1 \\
+                        \Delta \overline V_1 &= 2 a X_1 (1 - X_1)^2 \\
+                        \Delta \overline V_1 &= 2 a (X_1  - 2X_1^2 + X_1^3) \\
+                        d\Delta \overline V_1 &= 2 a (3X_1^2 - 4X_1 + 1)dX_1 \\
+                        d\Delta \overline V_1 &= 2 a (3X_1 - 1)(X_1 - 1)dX_1 \\
+                    \end{aligned} \\
+                d\Delta \overline V_2 &= -\frac{X_1}{\cancel{1-  X_1}}2 a (3X_1 - 1)(\cancel{X_1 - 1})dX_1 \\
+                d\Delta \overline V_2 &= 2aX_1(3X_1 - 1)dX_1 \\
+                \int d\Delta \overline V_2 &= \int 2aX_1(3X_1 - 1)dX_1 \\
+                \Delta \overline V_2(X_1) &= 2a\left[X_1^3 - \frac{X_1^2}{2}\right] + C \\
+                                     & \begin{aligned}
+                                        \Delta \overline V_2(0) &= 0 \\
+                                        C &= 0 \\
+                                     \end{aligned} \\
+                \Aboxed{\Delta \overline V_2(X_1) &= 2aX_1^3 - aX_1^2}
+            \end{align*}
+        }
+
       \item Determine an equation for the total volume change during
         mixing as a function of composition.
+
+        \boxedanswer{
+            The total volume change can be written:
+
+            \begin{align*}
+                \Delta \overline V_{\text{mix}} &= X_1 \Delta \overline V_1 + X_2 \Delta \overline V_2 \\
+                                                & \begin{aligned}
+                                                    \Delta \overline V_1 &= 2aX_1 (1 - X_1)^2 \\
+                                                    \Delta \overline V_2(X_1) &= 2aX_1^3 - aX_1^2 \\
+                                                    X_2 &= 1 - X_1 \\
+                                                \end{aligned} \\
+                \Delta \overline V_{\text{mix}} &= X_12aX_1 (1 - X_1)^2 + (1 - X_1)(2aX_1^3 - aX_1^2) \\
+                \Delta \overline V_{\text{mix}} &= 2aX_1^2 - 4aX_1^3 + 
+                    \cancel{2aX_1^4} + 2aX_1^3 - aX_1^2 - 
+                    \cancel{2aX_1^4} + aX_1^3 \\
+                \Aboxed{\Delta \overline V_{\text{mix}} &= aX_1^2 - aX_1^3}
+            \end{align*}
+        }
+
       \item Calculate the total volume change of the mixture, the
         partial molar volume change of component 1, and the partial
         molar volume change of component 2
         (three separate numerical answers) when
         \SI{75}{\mole} of component 1 are mixed with \SI{25}{\mole}
         of component 2.
+
+        \boxedanswer{
+            \begin{align*}
+                \Delta \overline V_{\text{mix}} &= aX_1^2 - aX_1^3 \\
+                  &\begin{aligned}
+                      X_1 &= \frac{75}{75 + 25} = 0.75 \\
+                      a &= \SI{2.7166}{\centi\meter\cubed\per\mole}
+                  \end{aligned} \\
+                \Delta \overline V_{\text{mix}} &= (\SI{2.7166}{\centi\meter\cubed\per\mole})
+                    [(0.75)^2 - (0.75)^3] \\
+                \Aboxed{\Delta \overline V_{\text{mix}} &= \SI{0.382}{\centi\meter
+                    \cubed\per\mole}} \\
+                \Delta \overline V_2(X_1) &= 2(\SI{2.7166}{\centi\meter\cubed\per\mole})
+                [(0.75)^3 - (0.75)^2] \\
+                \Aboxed{\Delta \overline V_2(X_1) &= \SI{0.764}{\centi\meter\cubed\per\mole}} \\
+                \Delta \overline V_1 &= 2(\SI{2.7166}{\centi\meter\cubed\per\mole}
+                    )(0.75)(1 - (0.75))^2 \\
+                \Aboxed{\Delta \overline V_1 &= \SI{0.254}{\centi\meter\cubed\per\mole}}
+            \end{align*}
+        }
+
       \item GRAPHICALLY (i.e., you will need to plot something)
         verify the partial molar volume change
         of component 1 that you calculated in part (c). You can
         estimate your answer for this part.
+
+
+        
+    \boxedanswer{
+            \centering
+            \includegraphics[width=0.6\textwidth]{./assets/fig_3.png}
+
+            \textbf{The intercept is about $\bm{V_{\text{mix}} = \SI{0.76}{\centi\meter\cubed\per\mole}}$.}
+    }
+
     \end{enumerate}
+
+    \pagebreak
 
   \item Consider a binary phase containing the alloying elements A
     and B, which follows a subregular
@@ -196,6 +274,29 @@
         $\Delta G_{\text{mix}}$ for this
         phase at \SI{500}{\kelvin} over a compositional range of $X_B
         = 0$ to $X_B = 1$.
+
+        \boxedanswer{
+            The subregular solution model has the following form:
+
+            \begin{align*}
+                \Delta H_{\text{mix}} = \Delta G_{\text{mix}}^{\text{XS}} = 
+                    X_1X_2(\alpha_0X_1 + \alpha_1X_2) \tag{8.115} \\
+                    & \begin{aligned}
+                        X_1 &= X_A \\
+                        X_2 &= X_B \\
+                        \alpha_0 &= \omega_A = \SI{10500}{\joule\per\mole} \\
+                        \alpha_1 &= \omega_B = \SI{-3000}{\joule\per\mole} \\
+                        X_2 &= 1 - X_1 \\
+                    \end{aligned} \\ 
+                \Aboxed{\Delta G_{\text{mix}}^{\text{XS}} &= 
+                X_A(1 - X_A)[(\SI{10500}{\joule\per\mole})X_1 - (\SI{3000}{\joule\per\mole})X_2]}
+            \end{align*}
+
+
+            \centering
+            % \includegraphics[width=0.6\textwidth]{./assets/fig_4.png}
+        }
+
       \item On a new plot, plot that same three curves at
         \SI{5000}{\kelvin} over
         the same compositional range.
@@ -211,5 +312,4 @@
 
 % \section*{Supporting code:}
 % \inputminted{julia}{./calculations/src/calculations.jl}
-
 \end{document}
