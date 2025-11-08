@@ -1,10 +1,7 @@
 \input{./src/main.sty}
-% Additional SI unit for Fahrenheit
-\DeclareSIUnit\fahrenheit{\degree F}
 
 \begin{document}
 
-% Include title page
 \input{./src/titlepage.tex}
 
 \pagebreak
@@ -28,20 +25,24 @@
         energy, derive this relationship.
 
         \boxedanswer{
-            Recall the Gibbs free energy of mixing:
+          Recall the Gibbs free energy of mixing:
 
-            \begin{equation}
-                \Delta G_{\text{mix}} = a_0X_1X_2 + RT(X_1\ln X_1 + X_2 \ln X_2) \tag{8.110}
-            \end{equation}
+          \begin{equation}
+            \Delta G_{\text{mix}} = a_0X_1X_2 + RT(X_1\ln X_1 + X_2
+            \ln X_2) \tag{8.110}
+          \end{equation}
 
+          Set $X_1 = \phi_A$ and $a_0 = \chi RT$. Note that $X_2 = 1
+          - X_1$, and that $\frac{d\Delta G_{\text{mix}}}{dX_1}$
 
-            Set $X_1 = \phi_A$ and $a_0 = \chi RT$. Note that $X_2 = 1 - X_1$, and that $\frac{d\Delta G_{\text{mix}}}{dX_1}$
-
-            \begin{align*}
-                \frac{d(\Delta G_{\text{mix}}/(RT))}{d\phi_A} &= \chi(1 - 2\phi_A) + (\ln \phi_A + 1 - \ln (1 - \phi_A) + 1) = 0  \\
-                \chi(2\phi_A - 1) &= RT\left(\ln \left[\frac{\phi_A}{1 - \phi_A}\right] + 2\right)  \\
-                \Aboxed{\chi &= \frac{1}{2\phi_A - 1}\left(\ln \left[\frac{\phi_A}{1 - \phi_A}\right]\right)}
-            \end{align*}
+          \begin{align*}
+            \frac{d(\Delta G_{\text{mix}}/(RT))}{d\phi_A} &= \chi(1 -
+            2\phi_A) + (\ln \phi_A + 1 - \ln (1 - \phi_A) + 1) = 0  \\
+            \chi(2\phi_A - 1) &= RT\left(\ln \left[\frac{\phi_A}{1 -
+            \phi_A}\right] + 2\right)  \\
+            \Aboxed{\chi &= \frac{1}{2\phi_A - 1}\left(\ln
+            \left[\frac{\phi_A}{1 - \phi_A}\right]\right)}
+          \end{align*}
         }
 
       \item  Without bothering to measure the initial volume fraction
@@ -55,21 +56,22 @@
 
         \boxedanswer{
 
-        Plug into the above equation:
+          Plug into the above equation:
 
-            \begin{align*}
-                \chi &= \frac{1}{2\phi_A - 1}\left(\ln \left[\frac{\phi_A}{1 - \phi_A}\right] + 2\right) \\
-                \chi &= \frac{1}{2(0.8) - 1}\left(\ln \left[\frac{0.8}{1 - 0.8}\right]\right) \\
-                \Aboxed{\chi &\approx 2.310}
-            \end{align*}
+          \begin{align*}
+            \chi &= \frac{1}{2\phi_A - 1}\left(\ln
+            \left[\frac{\phi_A}{1 - \phi_A}\right] + 2\right) \\
+            \chi &= \frac{1}{2(0.8) - 1}\left(\ln \left[\frac{0.8}{1
+            - 0.8}\right]\right) \\
+            \Aboxed{\chi &\approx 2.310}
+          \end{align*}
         }
 
       \item In a separate experiment, you prepare a mixture, this
         time taking care to record a volume
         fraction $\phi_A^{(0)} = 0.6$, and place it in your lab
-        refrigerator, cooling it to
-        $T = \SI{35}{\degree F}$ . You notice an
-        \underline{almost complete separation} of A from water.
+        refrigerator, cooling it to $T = \SI{35}{\degree F}$ . You
+        notice an \underline{almost complete separation} of A from water.
         Thinking that you
         might have difficulty measuring the
         possibly trace amounts of water in the A-rich phase, you
@@ -80,18 +82,19 @@
 
         \boxedanswer{
 
-            We can assume that volume is conserved, and calculate the
-            volume fraction as follows:
+          We can assume that volume is conserved, and calculate the
+          volume fraction as follows:
 
-            \begin{align*}
-                \phi_A^{(0)} &= a\phi_A^{(1)} + (1 - a)\phi_A^{(2)} \\
-                             & \begin{aligned}
-                                \phi_A^{(2)} \approx 0 \\
-                                a &= 0.62 \\
-                         \end{aligned} \\
-                \phi_A^{(1)} &= \frac{0.6}{0.62} \\
-                \Aboxed{\phi_A^{(1)} &= 0.968}
-            \end{align*}
+          \begin{align*}
+            \phi_A^{(0)} &= a\phi_A^{(1)} + (1 - a)\phi_A^{(2)} \\
+            &
+            \begin{aligned}
+              \phi_A^{(2)} \approx 0 \\
+              a &= 0.62 \\
+            \end{aligned} \\
+            \phi_A^{(1)} &= \frac{0.6}{0.62} \\
+            \Aboxed{\phi_A^{(1)} &= 0.968}
+          \end{align*}
         }
 
       \item The interaction parameter can be expressed as a function
@@ -100,51 +103,65 @@
         constants. Using the data obtained from your two
         experiments, determine $A$ and $B$.
 
-    \boxedanswer{
+        \boxedanswer{
 
-        We have two data points, at the first data point, the interaction
-        parameter is 5.644 at \SI{50}{\degree F} or \SI{283.15}{\kelvin},
-        and the volume fraction is 0.968 at \SI{35}{\degree F} or \SI{274.816}{\kelvin}. 
-        This can be used to find the interaction parameter at this temperature, 
-        and then the linear equation can be fitted.
+          We have two data points, at the first data point, the interaction
+          parameter is 5.644 at \SI{50}{\degree F} or \SI{283.15}{\kelvin},
+          and the volume fraction is 0.968 at \SI{35}{\degree F} or
+          \SI{274.816}{\kelvin}.
+          This can be used to find the interaction parameter at this
+          temperature,
+          and then the linear equation can be fitted.
 
-        \begin{align*} 
+          \begin{align*}
             \chi_1 &= \frac{A}{T_1} + B \\
             \chi_2 &= \frac{A}{T_2} + B \\
             B &= \chi_1 - \frac{A}{T_1} \\
-            A &= \frac{\chi_2 - \chi_1}{\left(\frac{1}{T_2}  - \frac{1}{T_1}\right)} \\
-            % B &= \chi_1 - \frac{\chi_2 - \chi_1}{\left(\frac{T_1}{T_2}  - 1\right)} \\
-            A &= \frac{\chi_2 - \chi_1}{\left(\frac{1}{T_2}  - \frac{1}{T_1}\right)} \\
-              & \begin{aligned}    
-                \chi_1 &= 2.31 \\
-                \chi_2 &= \frac{1}{2\phi_A - 1}\left(\ln \left[\frac{\phi_A}{1 - \phi_A}\right]\right) \\
-                \chi &= \frac{1}{2(0.968) - 1}\left(\ln \left[\frac{(0.968)}{1 - 0.968}\right]\right) \\
-                \chi_2 &= 3.66 \\
-                T_1 &= \SI{283.15}{\kelvin} \\
-                T_2 &= \SI{274.816}{\kelvin} \\
-              \end{aligned} \\
-            A &= \frac{(3.66) - (2.31)}{\left(\frac{1}{(\SI{283.15}{\kelvin})}  - \frac{1}{\SI{274.816}{\kelvin}}\right)} \\
+            A &= \frac{\chi_2 - \chi_1}{\left(\frac{1}{T_2}  -
+            \frac{1}{T_1}\right)} \\
+            % B &= \chi_1 - \frac{\chi_2 -
+            % \chi_1}{\left(\frac{T_1}{T_2}  - 1\right)} \\
+            A &= \frac{\chi_2 - \chi_1}{\left(\frac{1}{T_2}  -
+            \frac{1}{T_1}\right)} \\
+            &
+            \begin{aligned}
+              \chi_1 &= 2.31 \\
+              \chi_2 &= \frac{1}{2\phi_A - 1}\left(\ln
+              \left[\frac{\phi_A}{1 - \phi_A}\right]\right) \\
+              \chi &= \frac{1}{2(0.968) - 1}\left(\ln
+              \left[\frac{(0.968)}{1 - 0.968}\right]\right) \\
+              \chi_2 &= 3.66 \\
+              T_1 &= \SI{283.15}{\kelvin} \\
+              T_2 &= \SI{274.816}{\kelvin} \\
+            \end{aligned} \\
+            A &= \frac{(3.66) -
+            (2.31)}{\left(\frac{1}{(\SI{283.15}{\kelvin})}  -
+            \frac{1}{\SI{274.816}{\kelvin}}\right)} \\
             A &= \SI{12375.02}{\kelvin} \\
-            B &= (2.31) - \frac{(\SI{12375.02}{\kelvin})}{(\SI{283.15}{\kelvin})} \\
+            B &= (2.31) -
+            \frac{(\SI{12375.02}{\kelvin})}{(\SI{283.15}{\kelvin})} \\
             B &= -41.39 \\
             \Aboxed{\chi(T) &= \frac{\SI{12375.02}{\kelvin}}{T} -41.39}
-        \end{align*}
-    }
+          \end{align*}
+        }
 
-      \item Using what you have learned, determine the \textit{upper critical
+      \item Using what you have learned, determine the
+        \textit{upper critical
         solution temperature (UCST)} – the
-        temperature above which A and water are miscible for all compositions.
+        temperature above which A and water are miscible for all
+        compositions.
 
         \boxedanswer{
 
-           The critical value for $\chi$ is 2. So: 
+          The critical value for $\chi$ is 2. So:
 
-            \begin{align*}
-                \chi_c &= \frac{A}{T_c} + B \\ 
-                T_c &= \left[\frac{\chi_c - B}{A}\right]^{-1} \\ 
-                T_c &= \left[\frac{2 + 41.39}{\SI{12375.02}{\kelvin}}\right]^{-1} \\ 
-                \Aboxed{T_c &= \SI{285.18}{\kelvin}}
-            \end{align*}
+          \begin{align*}
+            \chi_c &= \frac{A}{T_c} + B \\
+            T_c &= \left[\frac{\chi_c - B}{A}\right]^{-1} \\
+            T_c &= \left[\frac{2 +
+            41.39}{\SI{12375.02}{\kelvin}}\right]^{-1} \\
+            \Aboxed{T_c &= \SI{285.18}{\kelvin}}
+          \end{align*}
         }
 
     \end{enumerate}
@@ -166,49 +183,58 @@
         as a function of composition.
 
         \boxedanswer{
-            Use the Gibbs-Duhem relation:
+          Use the Gibbs-Duhem relation:
 
-            \begin{align*}
-                X_1 d\Delta \overline{V}_1 + X_2 d\Delta \overline V_2 &= 0 \\
-                d\Delta \overline V_2 &= -\frac{X_1}{X_2}d\Delta \overline{V}_1 \\
-                    & \begin{aligned}
-                        X_2 &= 1 - X_1 \\
-                        \Delta \overline V_1 &= 2 a X_1 (1 - X_1)^2 \\
-                        \Delta \overline V_1 &= 2 a (X_1  - 2X_1^2 + X_1^3) \\
-                        d\Delta \overline V_1 &= 2 a (3X_1^2 - 4X_1 + 1)dX_1 \\
-                        d\Delta \overline V_1 &= 2 a (3X_1 - 1)(X_1 - 1)dX_1 \\
-                    \end{aligned} \\
-                d\Delta \overline V_2 &= -\frac{X_1}{\cancel{1-  X_1}}2 a (3X_1 - 1)(\cancel{X_1 - 1})dX_1 \\
-                d\Delta \overline V_2 &= 2aX_1(3X_1 - 1)dX_1 \\
-                \int d\Delta \overline V_2 &= \int 2aX_1(3X_1 - 1)dX_1 \\
-                \Delta \overline V_2(X_1) &= 2a\left[X_1^3 - \frac{X_1^2}{2}\right] + C \\
-                                     & \begin{aligned}
-                                        \Delta \overline V_2(0) &= 0 \\
-                                        C &= 0 \\
-                                     \end{aligned} \\
-                \Aboxed{\Delta \overline V_2(X_1) &= 2aX_1^3 - aX_1^2}
-            \end{align*}
+          \begin{align*}
+            X_1 d\Delta \overline{V}_1 + X_2 d\Delta
+            \overline V_2 &= 0 \\
+            d\Delta \overline V_2 &= -\frac{X_1}{X_2}d\Delta
+            \overline{V}_1 \\
+            &
+            \begin{aligned}
+              X_2 &= 1 - X_1 \\
+              \Delta \overline V_1 &= 2 a X_1 (1 - X_1)^2 \\
+              \Delta \overline V_1 &= 2 a (X_1  - 2X_1^2 + X_1^3) \\
+              d\Delta \overline V_1 &= 2 a (3X_1^2 - 4X_1 + 1)dX_1 \\
+              d\Delta \overline V_1 &= 2 a (3X_1 - 1)(X_1 - 1)dX_1 \\
+            \end{aligned} \\
+            d\Delta \overline V_2 &= -\frac{X_1}{\cancel{1-  X_1}}2 a
+            (3X_1 - 1)(\cancel{X_1 - 1})dX_1 \\
+            d\Delta \overline V_2 &= 2aX_1(3X_1 - 1)dX_1 \\
+            \int d\Delta \overline V_2 &= \int 2aX_1(3X_1 - 1)dX_1 \\
+            \Delta \overline V_2(X_1) &= 2a\left[X_1^3 -
+            \frac{X_1^2}{2}\right] + C \\
+            &
+            \begin{aligned}
+              \Delta \overline V_2(0) &= 0 \\
+              C &= 0 \\
+            \end{aligned} \\
+            \Aboxed{\Delta \overline V_2(X_1) &= 2aX_1^3 - aX_1^2}
+          \end{align*}
         }
 
       \item Determine an equation for the total volume change during
         mixing as a function of composition.
 
         \boxedanswer{
-            The total volume change can be written:
+          The total volume change can be written:
 
-            \begin{align*}
-                \Delta \overline V_{\text{mix}} &= X_1 \Delta \overline V_1 + X_2 \Delta \overline V_2 \\
-                                                & \begin{aligned}
-                                                    \Delta \overline V_1 &= 2aX_1 (1 - X_1)^2 \\
-                                                    \Delta \overline V_2(X_1) &= 2aX_1^3 - aX_1^2 \\
-                                                    X_2 &= 1 - X_1 \\
-                                                \end{aligned} \\
-                \Delta \overline V_{\text{mix}} &= X_12aX_1 (1 - X_1)^2 + (1 - X_1)(2aX_1^3 - aX_1^2) \\
-                \Delta \overline V_{\text{mix}} &= 2aX_1^2 - 4aX_1^3 + 
-                    \cancel{2aX_1^4} + 2aX_1^3 - aX_1^2 - 
-                    \cancel{2aX_1^4} + aX_1^3 \\
-                \Aboxed{\Delta \overline V_{\text{mix}} &= aX_1^2 - aX_1^3}
-            \end{align*}
+          \begin{align*}
+            \Delta \overline V_{\text{mix}} &= X_1 \Delta \overline
+            V_1 + X_2 \Delta \overline V_2 \\
+            &
+            \begin{aligned}
+              \Delta \overline V_1 &= 2aX_1 (1 - X_1)^2 \\
+              \Delta \overline V_2(X_1) &= 2aX_1^3 - aX_1^2 \\
+              X_2 &= 1 - X_1 \\
+            \end{aligned} \\
+            \Delta \overline V_{\text{mix}} &= X_12aX_1 (1 - X_1)^2 +
+            (1 - X_1)(2aX_1^3 - aX_1^2) \\
+            \Delta \overline V_{\text{mix}} &= 2aX_1^2 - 4aX_1^3 +
+            \cancel{2aX_1^4} + 2aX_1^3 - aX_1^2 -
+            \cancel{2aX_1^4} + aX_1^3 \\
+            \Aboxed{\Delta \overline V_{\text{mix}} &= aX_1^2 - aX_1^3}
+          \end{align*}
         }
 
       \item Calculate the total volume change of the mixture, the
@@ -219,23 +245,30 @@
         of component 2.
 
         \boxedanswer{
-            \begin{align*}
-                \Delta \overline V_{\text{mix}} &= aX_1^2 - aX_1^3 \\
-                  &\begin{aligned}
-                      X_1 &= \frac{75}{75 + 25} = 0.75 \\
-                      a &= \SI{2.7166}{\centi\meter\cubed\per\mole}
-                  \end{aligned} \\
-                \Delta \overline V_{\text{mix}} &= (\SI{2.7166}{\centi\meter\cubed\per\mole})
-                    [(0.75)^2 - (0.75)^3] \\
-                \Aboxed{\Delta \overline V_{\text{mix}} &= \SI{0.382}{\centi\meter
-                    \cubed\per\mole}} \\
-                \Delta \overline V_2(X_1) &= 2(\SI{2.7166}{\centi\meter\cubed\per\mole})
-                [(0.75)^3 - (0.75)^2] \\
-                \Aboxed{\Delta \overline V_2(X_1) &= \SI{0.764}{\centi\meter\cubed\per\mole}} \\
-                \Delta \overline V_1 &= 2(\SI{2.7166}{\centi\meter\cubed\per\mole}
-                    )(0.75)(1 - (0.75))^2 \\
-                \Aboxed{\Delta \overline V_1 &= \SI{0.254}{\centi\meter\cubed\per\mole}}
-            \end{align*}
+          \begin{align*}
+            \Delta \overline V_{\text{mix}} &= aX_1^2 - aX_1^3 \\
+            &
+            \begin{aligned}
+              X_1 &= \frac{75}{75 + 25} = 0.75 \\
+              a &= \SI{2.7166}{\centi\meter\cubed\per\mole}
+            \end{aligned} \\
+            \Delta \overline V_{\text{mix}} &=
+            (\SI{2.7166}{\centi\meter\cubed\per\mole})
+            [(0.75)^2 - (0.75)^3] \\
+            \Aboxed{\Delta \overline V_{\text{mix}} &=
+              \SI{0.382}{\centi\meter
+            \cubed\per\mole}} \\
+            \Delta \overline V_2(X_1) &=
+            2(\SI{2.7166}{\centi\meter\cubed\per\mole})
+            [(0.75)^3 - (0.75)^2] \\
+            \Aboxed{\Delta \overline V_2(X_1) &=
+            \SI{0.764}{\centi\meter\cubed\per\mole}} \\
+            \Delta \overline V_1 &=
+            2(\SI{2.7166}{\centi\meter\cubed\per\mole}
+            )(0.75)(1 - (0.75))^2 \\
+            \Aboxed{\Delta \overline V_1 &=
+            \SI{0.254}{\centi\meter\cubed\per\mole}}
+          \end{align*}
         }
 
       \item GRAPHICALLY (i.e., you will need to plot something)
@@ -243,14 +276,13 @@
         of component 1 that you calculated in part (c). You can
         estimate your answer for this part.
 
+        \boxedanswer{
+          \centering
+          \includegraphics[width=0.6\textwidth]{./assets/fig_3.png}
 
-        
-    \boxedanswer{
-            \centering
-            \includegraphics[width=0.6\textwidth]{./assets/fig_3.png}
-
-            \textbf{The intercept is about $\bm{V_{\text{mix}} = \SI{0.76}{\centi\meter\cubed\per\mole}}$.}
-    }
+          \textbf{The intercept is about $V_{\text{mix} =
+          \SI{0.76}{\centi\meter\cubed\per\mole}}$.}
+        }
 
     \end{enumerate}
 
@@ -276,40 +308,80 @@
         = 0$ to $X_B = 1$.
 
         \boxedanswer{
-            The subregular solution model has the following form:
+          The subregular solution model has the following form:
 
-            \begin{align*}
-                \Delta H_{\text{mix}} = \Delta G_{\text{mix}}^{\text{XS}} = 
-                    X_1X_2(\alpha_0X_1 + \alpha_1X_2) \tag{8.115} \\
-                    & \begin{aligned}
-                        X_1 &= X_A \\
-                        X_2 &= X_B \\
-                        \alpha_0 &= \omega_A = \SI{10500}{\joule\per\mole} \\
-                        \alpha_1 &= \omega_B = \SI{-3000}{\joule\per\mole} \\
-                        X_2 &= 1 - X_1 \\
-                    \end{aligned} \\ 
-                \Aboxed{\Delta G_{\text{mix}}^{\text{XS}} &= 
-                X_A(1 - X_A)[(\SI{10500}{\joule\per\mole})X_1 - (\SI{3000}{\joule\per\mole})X_2]}
+          \begin{align*}
+            \Delta H_{\text{mix}} &=
+            X_1X_2(\alpha_0X_1 + \alpha_1X_2) \tag{8.115} \\
+            &
+            \begin{aligned}
+              X_1 &= X_A \\
+              X_2 &= X_B \\
+              \alpha_0 &= \omega_A = \SI{10500}{\joule\per\mole} \\
+              \alpha_1 &= \omega_B = \SI{-3000}{\joule\per\mole} \\
+              X_A &= 1 - X_B \\
+            \end{aligned} \\
+            \Aboxed{\Delta G_{\text{mix}}^{\text{XS}} &=
+              (1 - X_B)X_B[(\SI{10500}{\joule\per\mole})(1 - X_B) -
+            (\SI{3000}{\joule\per\mole})X_B]} \\
+            \Aboxed{\Delta S_{\text{mix}} &= -R((1 - X_B)\ln (1 -
+              X_B) + X_B \ln X_B} \\
+              \Aboxed{\Delta G_{\text{mix}} &= \Delta H_{\text{mix}}
+              - T\Delta S_{\text{mix}}} \\
             \end{align*}
 
+            \centering
+            \includegraphics[width=0.6\textwidth]{./assets/fig_4.png}
+          }
+
+          \pagebreak
+
+        \item On a new plot, plot that same three curves at
+          \SI{5000}{\kelvin} over
+          the same compositional range.
+          Describe what you see in this plot and how entropy and
+          enthalpy play into the overall Gibbs free
+          energy of mixing.
+
+          \boxedanswer{
+            At higher temperatures, entropic effects dominate, and
+            enthalpic effects diminish.
 
             \centering
-            % \includegraphics[width=0.6\textwidth]{./assets/fig_4.png}
-        }
+            \includegraphics[width=0.6\textwidth]{./assets/fig_5.png}
+          }
 
-      \item On a new plot, plot that same three curves at
-        \SI{5000}{\kelvin} over
-        the same compositional range.
-        Describe what you see in this plot and how entropy and
-        enthalpy play into the overall Gibbs free
-        energy of mixing.
-      \item Using your plot from part (a), graphically determine the
-        activity coefficient of B in an alloy
-        containing \SI{60}{at\percent} B at \SI{500}{\kelvin}.
-    \end{enumerate}
+          \pagebreak
 
-\end{enumerate}
+        \item Using your plot from part (a), graphically determine the
+          activity coefficient of B in an alloy
+          containing \SI{60}{at\percent} B at \SI{500}{\kelvin}.
 
-% \section*{Supporting code:}
-% \inputminted{julia}{./calculations/src/calculations.jl}
-\end{document}
+          \boxedanswer{
+            \begin{align*}
+              1
+            \end{align*}
+            \centering
+            \includegraphics[width=0.6\textwidth]{./assets/fig_6.png}
+
+            The intercept at $X_B = 1$ is around $\SI{-3032}{\joule\per\mole}$.
+
+            \begin{align*}
+              \Delta G &= RT\ln a \\
+              a &= \exp\left(\frac{\Delta G}{RT}\right) \\
+              a &=
+              \exp\left(\frac{\SI{-3032}{\joule\per\mole}}{(\SI{8.314}{\joule\per\mole\kelvin})(\SI{500}{\kelvin})}\right)
+              \\
+              \Aboxed{a &= 0.482}
+            \end{align*}
+          }
+      \end{enumerate}
+
+  \end{enumerate}
+
+  \pagebreak
+
+  \section*{Supporting code:}
+  \inputminted{julia}{./calculations/src/calculations.jl}
+
+  \end{document}
